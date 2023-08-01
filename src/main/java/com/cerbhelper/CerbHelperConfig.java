@@ -1,11 +1,11 @@
-package com.hunllefhelper;
+package com.cerbhelper;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
 @ConfigGroup("hunllefhelper")
-public interface HunllefHelperConfig extends Config
+public interface CerbHelperConfig extends Config
 {
 	@ConfigItem(
 		position = 1,

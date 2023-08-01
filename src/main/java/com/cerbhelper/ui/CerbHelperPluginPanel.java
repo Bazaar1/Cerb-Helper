@@ -1,7 +1,7 @@
-package com.hunllefhelper.ui;
+package com.cerbhelper.ui;
 
-import com.hunllefhelper.HunllefHelperPlugin;
-import com.hunllefhelper.ui.components.Button;
+import com.cerbhelper.CerbHelperPlugin;
+import com.cerbhelper.ui.components.Button;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -17,9 +17,9 @@ import net.runelite.client.ui.DynamicGridLayout;
 import net.runelite.client.ui.PluginPanel;
 
 @Slf4j
-public class HunllefHelperPluginPanel extends PluginPanel
+public class CerbHelperPluginPanel extends PluginPanel
 {
-	private final HunllefHelperPlugin plugin;
+	private final CerbHelperPlugin plugin;
 
 	private final JPanel contentPanel;
 	private final JPanel activeView;
@@ -34,7 +34,7 @@ public class HunllefHelperPluginPanel extends PluginPanel
 	private Button resetButton;
 
 	@Inject
-	public HunllefHelperPluginPanel(HunllefHelperPlugin plugin)
+	public CerbHelperPluginPanel(CerbHelperPlugin plugin)
 	{
 		super(false);
 		this.plugin = plugin;

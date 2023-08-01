@@ -1,18 +1,18 @@
-package com.hunllefhelper;
+package com.cerbhelper;
 
 import com.google.inject.Provides;
 
-import static com.hunllefhelper.PluginConstants.ATTACK_DURATION;
-import static com.hunllefhelper.PluginConstants.COUNTER_INTERVAL;
-import static com.hunllefhelper.PluginConstants.INITIAL_COUNTER;
-import static com.hunllefhelper.PluginConstants.REGION_IDS_GAUNTLET;
-import static com.hunllefhelper.PluginConstants.ROTATION_DURATION;
-import static com.hunllefhelper.PluginConstants.SOUND_MAGE;
-import static com.hunllefhelper.PluginConstants.SOUND_ONE;
-import static com.hunllefhelper.PluginConstants.SOUND_RANGE;
-import static com.hunllefhelper.PluginConstants.SOUND_TWO;
+import static com.cerbhelper.PluginConstants.ATTACK_DURATION;
+import static com.cerbhelper.PluginConstants.COUNTER_INTERVAL;
+import static com.cerbhelper.PluginConstants.INITIAL_COUNTER;
+import static com.cerbhelper.PluginConstants.REGION_IDS_GAUNTLET;
+import static com.cerbhelper.PluginConstants.ROTATION_DURATION;
+import static com.cerbhelper.PluginConstants.SOUND_MAGE;
+import static com.cerbhelper.PluginConstants.SOUND_ONE;
+import static com.cerbhelper.PluginConstants.SOUND_RANGE;
+import static com.cerbhelper.PluginConstants.SOUND_TWO;
 
-import com.hunllefhelper.ui.HunllefHelperPluginPanel;
+import com.cerbhelper.ui.CerbHelperPluginPanel;
 
 import java.awt.Color;
 import java.util.concurrent.Executors;
@@ -39,7 +39,7 @@ import net.runelite.client.util.ImageUtil;
 @PluginDescriptor(
 	name = "Hunllef Helper"
 )
-public class HunllefHelperPlugin extends Plugin
+public class CerbHelperPlugin extends Plugin
 {
 	@Inject
 	private Client client;
@@ -48,12 +48,12 @@ public class HunllefHelperPlugin extends Plugin
 	private ClientToolbar clientToolbar;
 
 	@Inject
-	private HunllefHelperConfig config;
+	private CerbHelperConfig config;
 
 	@Inject
 	private AudioPlayer audioPlayer;
 
-	private HunllefHelperPluginPanel panel;
+	private CerbHelperPluginPanel panel;
 
 	private ScheduledExecutorService executorService;
 
@@ -70,7 +70,7 @@ public class HunllefHelperPlugin extends Plugin
 		audioPlayer.tryLoadAudio(config, new String[]{SOUND_MAGE, SOUND_RANGE, SOUND_ONE, SOUND_TWO});
 		audioMode = config.audioMode();
 
-		panel = injector.getInstance(HunllefHelperPluginPanel.class);
+		panel = injector.getInstance(CerbHelperPluginPanel.class);
 
 		navigationButton = NavigationButton
 			.builder()
@@ -157,9 +157,9 @@ public class HunllefHelperPlugin extends Plugin
 	}
 
 	@Provides
-	HunllefHelperConfig provideConfig(ConfigManager configManager)
+	CerbHelperConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(HunllefHelperConfig.class);
+		return configManager.getConfig(CerbHelperConfig.class);
 	}
 
 	private void tickCounter()

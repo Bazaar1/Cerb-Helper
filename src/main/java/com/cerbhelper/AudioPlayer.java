@@ -1,4 +1,4 @@
-package com.hunllefhelper;
+package com.cerbhelper;
 
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.RuneLite;
@@ -12,7 +12,7 @@ public class AudioPlayer
 {
 	private HashMap<String, Clip> clips = new HashMap<String, Clip>();
 
-	public void tryLoadAudio(HunllefHelperConfig config, String[] clipNames)
+	public void tryLoadAudio(CerbHelperConfig config, String[] clipNames)
 	{
 		for (String clipName : clipNames)
 		{
